@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Notes Taking App</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Registretion Window -->
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Registration</h1>
+          <p>Create an account</p>
+        </div>
+
+        <% if (messages.error && messages.error.length > 0) { %>
+        <div class="error-message"><%= messages.error[0] %></div>
+        <% } %>
+
+        <!-- Username Input -->
+        <form action="/register" method="POST" class="auth-form">
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="form-input"
+              placeholder="Choose a username"
+              required
+            />
+          </div>
+
+          <!-- Email Input -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-input"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+
+          <!-- Create Button -->
+          <button type="submit" class="auth-submit-btn">Create Account</button>
+        </form>
+
+        <!-- Redirect to Sign In -->
+        <div class="auth-footer">
+          <p>
+            Already have an account?
+            <a href="/login" class="auth-link">Sign in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

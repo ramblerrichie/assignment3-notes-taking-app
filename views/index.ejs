@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Taking App</title>
+
+    <script src="/app.js" defer></script>
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Headline -->
+      <h1>Notes Taking App</h1>
+
+      <!-- Centered Add Note button -->
+      <div class="header-center">
+        <button class="add-note-btn" onclick="openNoteDialog()">
+          + Add Note
+        </button>
+      </div>
+
+      <!-- Right side (empty for now, but ready for theme toggle or other buttons) -->
+      <div class="header-right">
+        <!-- You can add theme toggle or other buttons here later -->
+      </div>
+    </header>
+
+    <main id="notesContainer" class="notes-grid"></main>
+
+    <!-- Add Note Dialog  -->
+    <dialog id="noteDialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <!-- Headline -->
+          <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
+          <!-- Close button -->
+          <button class="class-btn" onclick="closeNoteDialog()">X</button>
+        </div>
+
+        <!-- Title Input -->
+        <form id="noteForm">
+          <div class="form-group">
+            <label for="noteTitle" class="form-label">Title</label>
+            <input
+              type="text"
+              id="noteTitle"
+              class="form-input"
+              placeholder="What's on your mind?"
+              required
+            />
+          </div>
+
+          <!-- Content Input -->
+          <div class="form-group">
+            <label for="noteContent" class="form-label">Content</label>
+            <textarea
+              id="noteContent"
+              class="form-textarea"
+              placeholder="Start writing your thoughts..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="dialog-actions">
+            <!-- Cancel button -->
+            <button
+              type="button"
+              class="cancel-btn"
+              onclick="closeNoteDialog()"
+            >
+              Cancel
+            </button>
+            <!-- Save button -->
+            <button type="submit" class="save-btn">Save Note</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <form action="/logout?_method=DELETE" method="POST">
+      <button type="submit">Log Out</button>
+    </form>
+  </body>
+</html>

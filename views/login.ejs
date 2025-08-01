@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Notes Taking App</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Login Window -->
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Notes Taking App</h1>
+          <p>Login your account</p>
+        </div>
+
+        <% if (messages.error && messages.error.length > 0) { %>
+        <div class="error-message"><%= messages.error[0] %></div>
+        <% } %>
+        <!-- Email Input -->
+        <form action="/login" method="POST" class="auth-form">
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <!-- Password Input -->
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-input"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <!-- Sign In Button -->
+          <button type="submit" class="auth-submit-btn">Sign In</button>
+        </form>
+
+        <!-- Redirect to Register -->
+        <div class="auth-footer">
+          <p>
+            You don't have an account?
+            <a href="/register" class="auth-link">Register</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
