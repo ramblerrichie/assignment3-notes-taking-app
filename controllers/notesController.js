@@ -59,7 +59,7 @@ export async function updateNote(req, res) {
   try {
     const updatedNote = await Note.findOneAndUpdate(
       { id },
-      { title: title.trim(), content: content.trim(), updatedAt: new Date() },
+      { title: title.trim(), content: content.trim() },
       { new: true }
     );
     if (!updatedNote) {
