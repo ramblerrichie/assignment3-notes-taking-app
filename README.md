@@ -45,8 +45,8 @@ Before running this application, make sure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-github-repo-url>
-cd assignment_3
+git clone https://github.com/ramblerrichie/assignment3-notes-taking-app.git
+cd assignment3-notes-taking-app
 ```
 
 ### 2. Install Dependencies
@@ -264,9 +264,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+**Richie MS**
+- GitHub: [@ramblerrichie](https://github.com/ramblerrichie)
+- Repository: [assignment3-notes-taking-app](https://github.com/ramblerrichie/assignment3-notes-taking-app)
 
 ## 🙏 Acknowledgments
 
